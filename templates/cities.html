@@ -1,0 +1,26 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>City ID</th>
+            <th>City Name</th>
+            <th>State</th>
+            <th>Pincode</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for city in cities %}
+        <tr>
+            <td>{{ city.city_id }}</td>
+            <td>{{ city.city_name }}</td>
+            <td>{{ city.state }}</td>
+            <td>{{ city.pincode }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No cities found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
